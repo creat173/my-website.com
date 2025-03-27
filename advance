@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .container {
+            margin: 30px auto;
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            animation: slideUp 1.5s ease-in-out;
+        }
+        label {
+            font-size: 18px;
+            display: block;
+            margin: 10px 0;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        button {
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Flight Booking System</div>
+    <div class="container">
+        <form>
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" placeholder="Enter departure city" required>
+
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" placeholder="Enter destination city" required>
+
+            <label for="date">Departure Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="return">Return Date:</label>
+            <input type="date" id="return" name="return">
+
+            <label for="passengers">Passengers:</label>
+            <input type="number" id="passengers" name="passengers" min="1" value="1" required>
+
+            <label for="class">Class:</label>
+            <select id="class" name="class">
+                <option value="economy">Economy</option>
+                <option value="premium">Premium Economy</option>
+                <option value="business">Business</option>
+                <option value="first">First Class</option>
+            </select>
+
+            <label for="airline">Preferred Airline:</label>
+            <select id="airline" name="airline">
+                <option value="any">Any</option>
+                <option value="emirates">Emirates</option>
+                <option value="qatar">Qatar Airways</option>
+                <option value="singapore">Singapore Airlines</option>
+                <option value="turkish">Turkish Airlines</option>
+            </select>
+
+            <button type="submit">Search Flights</button>
+        </form>
+    </div>
+</body>
+</html>
